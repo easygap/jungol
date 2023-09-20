@@ -10,11 +10,9 @@ public class Main {
 		int a = scanner.nextInt();
 		scanner.close();
 
+		System.out.println(a);
 		if (a<0) {
-			System.out.println(a);
 			System.out.println("minus");
-		} else {
-			System.out.println(a);
 		}
 	}
 }
