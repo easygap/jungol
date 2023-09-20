@@ -8,6 +8,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		
 		int a = scanner.nextInt();
+		scanner.close();
 
 		if (a<0) {
 			System.out.println(a);
