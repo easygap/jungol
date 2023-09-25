@@ -15,13 +15,15 @@ public class Main {
 		int korJ = sc.nextInt();
 		int engJ = sc.nextInt();
 		
+		sc.close();
+		
 		Average avgL = new Average(nameL, korL, engL);
 		Average avgJ = new Average(nameJ, korJ, engJ);
 		
 		avgL.getAvg(nameL, korL, engL);
 		avgJ.getAvg(nameJ, korJ, engJ);
 		
-		avgJ.mkAvg(korL, engL, korJ, korL);
+		avgJ.sumAvg(korL, engL, korJ, engJ);
 	}
 }
 
@@ -40,9 +42,9 @@ class Average{
 		System.out.println(name + " " + kor + " " + eng); 
 	}
 	
-	public void mkAvg(int korL, int engL, int korJ, int engJ) {
-		float avgKor = (float) (korL + korJ / 2);
-		float avgEng = (float) (engL + engJ / 2);
+	public void sumAvg(int korL, int engL, int korJ, int engJ) {
+		int avgKor = korL + korJ;
+		int avgEng = engL + engJ;
 		System.out.println("합계 " + avgKor + " " + avgEng); 
 	}
 }
