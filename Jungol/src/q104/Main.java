@@ -3,10 +3,13 @@ package q104;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("kor 90");
-		System.out.println("mat 80");
-		System.out.println("eng 100");
-		System.out.println("sum 270");
+		int a= 90;
+		int b = 80;
+		int c = 100;
+		int d = a + b + c;
+		System.out.println("kor " + a);
+		System.out.println("mat " + b);
+		System.out.println("eng " + c);
+		System.out.println("sum " + d);
 	}
-
 }
