@@ -6,24 +6,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		int even = 0;		// 짝수 count
-		int odd = 0;		// 홀수 count
-		
-		while(true) {
+
+		int even = 0; // 짝수 count 변수 선언
+		int odd = 0; // 홀수 count 변수 선언
+
+		while (true) {
 			int num = sc.nextInt();
-			if(num % 2 == 0 && num != 0) {
+			if (num == 0) {
+				sc.close();
+				break;
+			} else if (num % 2 == 0) {		// 짝수 count
 				even++;
-			}
-			if(num % 2 != 0 && num != 0) {
+			} else {						// 홀수 count
 				odd++;
 			}
-			if(num == 0) {
-				sc.close();
-				System.out.println("odd : " + odd);
-				System.out.println("even : " + even);
-				break;
-			}
 		}
+		System.out.println("odd : " + odd);
+		System.out.println("even : " + even);
 	}
 }
