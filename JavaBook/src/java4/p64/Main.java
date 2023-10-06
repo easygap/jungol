@@ -1,10 +1,7 @@
 package java4.p64;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Main {
 
@@ -38,18 +35,18 @@ public class Main {
 			for(int i = 0; i < gamer.length; i++) {		// 사용자에게 3개의 값을 입력 받음
 				gamer[i] = sc.nextInt();
 			}
-			for(int i = 0; i < gamer.length; i++) {		// 반복문을 돌면서 0번 index 부터 입력 값과 난수를 비교
-				if(gamer[i] == (num[i]+1)) {
-					strike++;
-				}
-
-				if (gamer[i] != (num[i] + 1) && Arrays.asList(num).contains(gamer)) {
-					ball++;
-				}
-				if((gamer[0]+1) == num[0] && (gamer[1]+1) == num[1] && (gamer[2]+1) == num[2]) {
-					System.out.println("홈런");
-					sc.close();
-					end = false;
+			for(int i = 0; i < num.length; i++) {		// 반복문을 돌면서 0번 index 부터 입력 값과 난수를 비교
+				for (int j = 1; j <= gamer.length; j++) {
+					if (gamer[j] == num[i] && i == j) {
+						strike++;
+					} else if (gamer[j] == num[i]) {
+						ball++;
+					}
+					if (strike == 3) {
+						System.out.println("아웃!! 게임을 종료합니다.");
+						sc.close();
+						end = false;
+					}
 				}
 			}
 			System.out.println(strike + "strike, " + ball + "ball");
