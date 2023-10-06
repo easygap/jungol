@@ -27,19 +27,18 @@ public class Main {
 				i--;
 		}
 		
-//		System.out.println(num[0] + 1);
-		
 		while(end) {
+			System.out.println("숫자 3개를 넣어주세요 ");
 			strike = 0;
 			ball = 0;
 			for(int i = 0; i < gamer.length; i++) {		// 사용자에게 3개의 값을 입력 받음
 				gamer[i] = sc.nextInt();
 			}
 			for(int i = 0; i < num.length; i++) {		// 반복문을 돌면서 0번 index 부터 입력 값과 난수를 비교
-				for (int j = 1; j <= gamer.length; j++) {
-					if (gamer[j] == num[i] && i == j) {
+				for (int j = 0; j < gamer.length; j++) {
+					if ((gamer[j]-1) == num[i] && i == j) {
 						strike++;
-					} else if (gamer[j] == num[i]) {
+					} else if ((gamer[j]-1) == num[i]) {
 						ball++;
 					}
 					if (strike == 3) {

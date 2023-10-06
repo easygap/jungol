@@ -1,4 +1,4 @@
-package p71;
+package java1.p71;
 
 import java.util.*;
 
