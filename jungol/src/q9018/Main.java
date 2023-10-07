@@ -11,6 +11,8 @@ public class Main {
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		
+		sc.close();
+		
 		System.out.println(num1 + " + " + num2 + " = " + (num1+num2));
 		System.out.println(num1 + " - " + num2 + " = " + (num1-num2));
 		System.out.println(num1 + " * " + num2 + " = " + (num1*num2));
