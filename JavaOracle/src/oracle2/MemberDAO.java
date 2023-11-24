@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MemberDAO {
 	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@localhost:1521/xe";
+	String url = "jdbc:oracle:thin:@localhost:1521/xe";	// localhost 오류 나면 개인 IP 주소로 수정 부탁드립니다.
 	String user = "c##green";
 	String password = "green1234";
 
