@@ -6,7 +6,7 @@ public class Main {
 
 		char[] num = new char[26];
 		
-		for (int i = 0, a = 'Z'; i < num.length; i++);
+		for (int i = 0, a = 'Z'; i < num.length; i++)
 		{
 			num[i] = (char) a--;
 			System.out.printf("%c ", num[i]);
